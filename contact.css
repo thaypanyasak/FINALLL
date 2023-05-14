@@ -1,35 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-  scroll-behavior: smooth;
-  scroll-padding-top: 2rem;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
 }
 body{
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #656565;
-    text-align: left;
-    background-color: #F3F3F3;
-}
-html::-webkit-scrollbar{
-  width: 0.5rem;
-}
-html::-webkit-scrollbar-thumb{
-  background: transparent;
-}
-html::-webkit-scrollbar-track{
-  background: var(--bg-colorr);
-  border-radius: 5rem;
-}
-html{
-    scroll-behavior: smooth;
+    background-color: #f3f3f3;
 }
 
 :root{
@@ -39,11 +21,25 @@ html{
     --bg-color: white;
     --box-shadow: 2px 2px 10px 4px rgb(14 55 54 / 15%);
 }
-img{
-    vertical-align: middle;
-    border-style: none;
-/*  BTN BACK TO TOP */
+
+html::-webkit-scrollbar{
+    width: 0.5rem;
 }
+html::-webkit-scrollbar-thumb{
+    background: transparent;
+}
+html::-webkit-scrollbar-track{
+    background: var(--bg-colorr);
+    border-radius: 5rem;
+}
+:root{
+    --main-color: aqua;
+    --second-color: white;
+    --text-color: black;
+    --bg-color: white;
+    --box-shadow: 2px 2px 10px 4px rgb(14 55 54 / 15%);
+}
+
 #myBtn {
     display: none;
     position: fixed;
@@ -63,6 +59,7 @@ img{
 #myBtn:hover {
     background-color: #555;
 }
+
 
 /* CARD*/
 .card-body {
@@ -198,24 +195,10 @@ img{
 }
 
 
-@media (min-width: 992px){
-.about-text {
-    margin-left: -90px;
-}}
-
-@media (min-width: 768px) {
-    .booking {
-      position: relative;
-      margin-top: -60px !important;
-      z-index: 1;
-    }
-  }
-
-
   .search-box{
     position: fixed;
     right: -100%;
-    top: 11%;
+    top: 10%;
 }
 .search-box input{
     padding: 10px;
@@ -243,6 +226,7 @@ img{
     background: var(--bg-color);
     box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
     transition: 0.2s;
+    background-color: #ffff;
 }
 .cart.active{
     right: 0;
@@ -332,65 +316,6 @@ img{
   color: var(--text-color);
   cursor: pointer;
 }
-/* TEAM */
-
-.team-social {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .5s;
-  }
-.team-social a.btn {
-    position: relative;
-    margin: 0 3px;
-    margin-top: 100px;
-    opacity: 0;
-}
-.team-item:hover {
-    box-shadow: 0 0 30px #CCCCCC;
-  }
-  
-  .team-item:hover .team-social {
-    background: rgba(0, 0, 0, 0.5);
-  }
-  
-  .team-item:hover .team-social a.btn:first-child {
-    opacity: 1;
-    margin-top: 0;
-    transition: .3s 0s;
-  }
-  
-  .team-item:hover .team-social a.btn:nth-child(2) {
-    opacity: 1;
-    margin-top: 0;
-    transition: .3s .05s;
-  }
-  
-  .team-item:hover .team-social a.btn:nth-child(3) {
-    opacity: 1;
-    margin-top: 0;
-    transition: .3s .1s;
-  }
-  
-  .team-item:hover .team-social a.btn:nth-child(4) {
-    opacity: 1;
-    margin-top: 0;
-    transition: .3s .15s;
-  }
-  
-  .team-item .team-img img {
-    transition: .5s;
-  }
-  
-  .team-item:hover .team-img img {
-    transform: scale(1.2);
-  }
-  
 /* USER LOGIN REGISTER*/
 .nav-bar .user button {
 	border-radius: 20px;
@@ -444,7 +369,7 @@ button.ghost {
 	text-align: center;
 }
 
-.nav-bar .container input {
+.nav-bar input {
 	background-color: #eee;
 	border: none;
 	padding: 12px 15px;
@@ -537,7 +462,7 @@ button.ghost {
 
 .overlay {
 	
-	background: url(./Images/basbg.jpg);
+	background: url(../Images/basbg.jpg);
   opacity: 0.9;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -621,22 +546,22 @@ button.ghost {
     color: var(--text-color);
     border-color: var(--text-color);
     background-color: #f3f3f3;
-  }
+}
   
-  .btn-outline-primary:hover {
+.btn-outline-primary:hover {
     color: #fff;
     background-color: var(--main-color);
     border-color: var(--main-color);
-  }
+}
   
-  .btn-outline-primary:focus, .btn-outline-primary.focus {
+.btn-outline-primary:focus, .btn-outline-primary.focus {
     box-shadow: 0 0 0 0.2rem --main-color;
-  }
+}
   
-  .btn-outline-primary.disabled, .btn-outline-primary:disabled {
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
     color: #7AB730;
     background-color: transparent;
-  }
+}
 
 /*BUY BUT */
 .truck-button {
@@ -882,4 +807,69 @@ button.ghost {
   }
 
 
+  /*** Section Title ***/
+.section-title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 80px);
+    height: 2px;
+    top: 4px;
+    left: -40px;
+    background: var(--main-color);
+    z-index: -1;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: calc(100% + 120px);
+    height: 2px;
+    bottom: 5px;
+    left: -60px;
+    background: var(--primary);
+    z-index: -1;
+}
+
+.section-title.text-start::before {
+    width: calc(100% + 40px);
+    left: 0;
+}
+
+.section-title.text-start::after {
+    width: calc(100% + 60px);
+    left: 0;
+}
+
+
+/* SOCIAL GAPP */
+.social-gap{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 20px;
+}
+
+/*  LOCATION  */
+.find-location { 
+    background-color: #162133;
+
+}
+.find-location p {
+    color: var(--second-color);
+    font-size: 40px;
+    margin: 0;
+    font-weight: 600;
+    padding: 95px 0;
+}
   
+.find-location p i {
+    margin-right: 10px;
+    color: #F28123;
+}
+

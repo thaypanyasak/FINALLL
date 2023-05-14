@@ -211,16 +211,22 @@ closeCart.onclick = () =>{
     document.getElementById('cart-icons').style.color='black';
     document.getElementById('menu-icons').style.color='black';
     document.getElementById('user-icons').style.color='black';
+
 };
 
+
+
+
+
 // User box 
-let user = document.querySelector(".user");
+
+let user = document.querySelector(".nav-bar .container");
 
 document.querySelector("#user-icons").onclick = () => {
     user.classList.toggle("active");
     cart.classList.remove("active");
     search.classList.remove("active");
-    navbar.classList.remove("active")
+    navbar.classList.remove("active");
 }
 
 /* Sử dụng Cart */
@@ -309,7 +315,7 @@ function addProductToCart(title,price,productImg){
                 showConfirmButton: false,
                 icon: 'success',
                 title: 'Thêm vào giỏ hàng thành công',
-                timer: 1500,
+                timer: 1000,
                 timerProgressBar: true,
             })
             return;
@@ -415,3 +421,41 @@ $(document).ready(function () {
 
     })
 });
+
+
+  // Back to top button
+  let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+
+
+// CHECK OUT
+
